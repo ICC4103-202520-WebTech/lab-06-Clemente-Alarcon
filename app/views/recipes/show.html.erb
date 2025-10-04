@@ -1,0 +1,16 @@
+<h1 class="mb-3"><%= @recipe.title %></h1>
+
+<ul class="list-unstyled mb-4">
+  <li><strong>Cook time:</strong> <%= @recipe.cook_time %> min</li>
+  <li><strong>Difficulty:</strong> <%= @recipe.difficulty %></li>
+</ul>
+
+<div class="card p-3 mb-4">
+  <h5 class="mb-2">Instructions</h5>
+  <%= @recipe.instructions %>
+</div>
+
+<div class="d-flex gap-2">
+  <%= link_to "Edit", edit_recipe_path(@recipe), class: "btn btn-secondary" %>
+  <%= link_to "Back", recipes_path, class: "btn btn-outline-secondary" %>
+</div>
